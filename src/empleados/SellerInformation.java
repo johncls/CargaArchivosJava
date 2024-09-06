@@ -1,18 +1,17 @@
-    package empleados;
-
+package empleados;
 import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Int;
     import java.util.ArrayList;
     import java.util.Arrays;
     import java.util.List;
 
-    public class InformacionVendedores {
+    public class SellerInformation {
         private String name;
         private String lastName;
         private String typeDocument;
         private Number document;
 
         // Constructor
-        public InformacionVendedores(String typeDocument, int document, String name, String lastName ) {
+        public SellerInformation(String typeDocument, int document, String name, String lastName ) {
             this.name = name;
             this.lastName = lastName;
             this.typeDocument = typeDocument;

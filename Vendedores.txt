@@ -1,3 +1,3 @@
-TipoDocumento;1012394072;NombresVendedor1;ApellidosVendedor1
-TipoDocumento;1012394072;NombresVendedor2;ApellidosVendedor2
-TipoDocumento;1012394072;NombresVendedor3;ApellidosVendedor3
+Cedula;1012394073;John Alexander;Pinilla Celis
+Cedula;1012394074;Juan Felipe; Pinilla Quintero 
+Cedula;1012394079;Lorena;Quintero

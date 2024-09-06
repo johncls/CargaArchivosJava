@@ -1,0 +1,3 @@
+TipoDocumento;1012394072;NombresVendedor1;ApellidosVendedor1
+TipoDocumento;1012394072;NombresVendedor2;ApellidosVendedor2
+TipoDocumento;1012394072;NombresVendedor3;ApellidosVendedor3

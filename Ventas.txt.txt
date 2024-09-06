@@ -1,0 +1,4 @@
+TipoDocumentoVendedor;NúmeroDocumentoVendedor
+IDProducto1;CantidadProducto1Vendido;
+IDProducto2;CantidadProducto2Vendido;
+IDProducto3;CantidadProducto3Vendido;

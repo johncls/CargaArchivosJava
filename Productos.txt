@@ -1,3 +1,9 @@
-1;pruebaUno;3000000
+1;pruebaUno;300000
 2;pruebaDos;600000
-3;pruebaTres;56777777
+3;pruebaTres;120000
+5;pruebacuatro;100000
+6;pruebacinco;50000
+7;pruabaseis;80000
+8;prueba8;570000
+9;pruebanueve;98000
+10;pruebadiez;854221

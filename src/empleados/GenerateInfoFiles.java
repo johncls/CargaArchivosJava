@@ -40,9 +40,5 @@ public class GenerateInfoFiles {
         }catch( Exception e){
             JOptionPane.showMessageDialog(null, "Ocurrio un erro");
         }
-    }
-    
-    
-    
-    
+    } 
 }

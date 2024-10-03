@@ -20,7 +20,7 @@ public class ReadingInfoFiles {
     
     /**
      * Lectura del archivo plano vendedores
-     * @param nombreArchivo 
+     * @param dataName  
      */
     public List<SellerInformation> SellerInformationData(String dataName){
         File archivo;
@@ -99,6 +99,7 @@ public class ReadingInfoFiles {
         File file;
         FileReader fr = null;
         BufferedReader br = null;
+        
         List<SalesInformation> sales = new ArrayList<>();
         
         try {
@@ -132,20 +133,14 @@ public class ReadingInfoFiles {
                     if (dataSales.length == 2) {
                         int productId = Integer.parseInt(dataSales[0]);
                         int quantity = Integer.parseInt(dataSales[1]);
-                        
-                        SalesInformation salesInformation = new SalesInformation(typeDocument, document, productId, quantity);
+                        Sales salesData = new Sales(productId,quantity);
+                        SalesInformation salesInformation = new SalesInformation(typeDocument, document, salesData);              
                         sales.add(salesInformation);
                     }
                 }
-                
-                // Imprimir la lista de ventas
-//                for (SalesInformation sale : sales) {
-//                    System.out.println("Producto ID: " + sale.getIdProducto() + ", Cantidad: " + sale.getQuantitySold());
-//                }
+                              
             }
-            
-            
-            
+         
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Error al leer el archivo: " + e.getMessage());
         }

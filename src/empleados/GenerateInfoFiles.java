@@ -14,27 +14,34 @@ import javax.swing.JOptionPane;
  */
 public class GenerateInfoFiles {
     
-    /**
-     * Metodo para escribir en un archivo plano
-     * @param data 
-     */
-    public void GenerateDocument(String nombre){
+   /**
+    * Metodo para generar el documento
+    * @param report lista del reporte
+    */
+    public void GenerateDocument(String salesFile, List<SalesReport> report){
         File f;
         FileWriter w; 
         BufferedWriter bw;
         PrintWriter wr;
-        
+        String name;
         try {
             
-            f = new File(nombre);
+            f = new File("Reporte "+salesFile);
             w = new FileWriter(f);
             bw = new BufferedWriter(w);
             wr = new PrintWriter(bw);
             
-            wr.write("Esta es nuestra primer linea de codigo");
-            wr.append("\nEsta es nuestra segunda linea de codigo");
-            wr.append("\nLinea final");
-            
+            report.forEach(x -> {
+                wr.write("Reporte "+ x.getName()+ " - "+x.getLastName());
+                wr.append("\n"
+                        + " ID del producto: " + x.getIdProduct()
+                        + " | Nombre del producto: " + x.getNameProduct()
+                        + " | Cantidad vendida: " + x.getQuantitySolid()
+                        + " | Precio unitario del producto: " + x.getPriceProduct()
+                        + " | Total vendido: " + x.getTotal()
+                );
+                //wr.append("\nLinea final");
+            });
             wr.close();
             bw.close();
         }catch( Exception e){

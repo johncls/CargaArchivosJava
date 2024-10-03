@@ -14,17 +14,16 @@ import javax.swing.JOptionPane;
 public class SalesInformation {
         private String typeDocument;
         private Number document;
-        private Number idProduct;
-        private Number quantitySold;
+        Sales salesData; 
         
     // Constructor
-        public SalesInformation(String TypeDocument, Number Document, int IdProducto, int QuantitySold ) {
+        public SalesInformation(String TypeDocument, Number Document, Sales SalesData ) {
             this.typeDocument = TypeDocument;
             this.document = Document;
-            this.idProduct = IdProducto;
-            this.quantitySold = QuantitySold;
+            this.salesData = SalesData;
         }
 
+        
         
         // Getters && Setters
 
@@ -44,19 +43,11 @@ public class SalesInformation {
             this.document = document;
         }
 
-        public Number getIdProducto() {
-            return idProduct;
+        public Sales getSales() {
+            return salesData;
         }
 
-        public void setIdProduct(int idProduct) {
-            this.idProduct = idProduct;
-        }
-        
-        public Number getQuantitySold() {
-            return quantitySold;
-        }
-
-        public void setQuantitySold(int quantitySold) {
-            this.quantitySold = quantitySold;
-        } 
+        public void setSalesData(Sales salesData) {
+            this.salesData = salesData;
+        }     
 }

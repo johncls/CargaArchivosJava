@@ -5,6 +5,7 @@
  */
 package empleados;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +21,7 @@ public class SalesService {
         this.fileService = fileService;
     }
 
-    public void generateSalesReport(String salesFile, String productFile, String employeeFile) {
+    public void generateSalesReport(String salesFile, String productFile, String employeeFile) throws IOException {
         
         
         List<SalesInformation> salesInformation = fileService.readSalesInformation(salesFile);
@@ -57,7 +58,7 @@ public class SalesService {
         printReport(salesFile, report);
     }
 
-    private void printReport(String salesFile, List<SalesReport> report) {
+    private void printReport(String salesFile, List<SalesReport> report) throws IOException {
         GenerateInfoFiles generateReport = new GenerateInfoFiles();
         generateReport.GenerateDocument(salesFile, report);
         report.forEach(r -> {        
